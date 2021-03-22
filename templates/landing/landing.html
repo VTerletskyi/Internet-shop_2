@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ap-shop</title>
+
+     <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--<link rel = "stylesheet" type="text/css" href = "/static/style.css" />
+    <link href="/static/style.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="{%  static 'landing.css' %}">
+
+</head>
+<body>
+
+    <div class="general-container">
+        <div class="container top-container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1 class="title">Нaш магазин скоро відкриється!<br>
+                    Залишйте Ваш емейл у формі</h1>
+                    <div>
+                        <form action="" method="post" class="form-inline text-center">{% csrf_token %}
+                        <div class="form-group">
+                            <label>Ваш емейл: </label>
+                            <input name="{{ form.email.name }}" class="form-control">
+                            <!-- {{ form.as_p }} відображає всі поля форм -->
+                        </div>
+                        <div class="form-group">
+                            <label> Ваше імя: </label>
+                           <!-- {{ form.name }} відображає одну з форм-->
+                            <input type="text" name="{{ form.name.name }}" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-orange">Відправити</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
